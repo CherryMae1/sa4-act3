@@ -14,7 +14,13 @@ while True:
     break
   else:
     amt_guess -= 1
-    print(f"You have {amt_guess} left.")
+    num = int(guess)
+    if num < number:
+      print("Your guess is too low, please try again or press 'q' to quit.")
+      print(f"You have {amt_guess} left.")
+    elif num > number:
+      print("Your guess is too high, please try again or press 'q' to quit.")
+      print(f"You have {amt_guess} left.")
     if amt_guess == 0:
       print('You have run out of guesses.')
       break
